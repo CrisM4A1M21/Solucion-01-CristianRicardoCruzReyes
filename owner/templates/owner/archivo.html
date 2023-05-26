@@ -1,0 +1,22 @@
+{% extends 'pokemon/base_generic.html' %}
+{% block content %}
+    <h1>“¡¡Hola Pythonista, el App Owner está funcionando correctamente!!”</h1>
+    {% if data_context.edad > 18 %}
+        <p>Luis es mayor de edad</p>
+    {% else %}
+        <p>Luis es menor de edad</p>
+    {% endif %}
+    <h2>Campo del modelo</h2>
+    {% for dato in datos %}
+        <p>Nombre: {{ dato.nombre }}</p>
+        <p>Pais: {{ dato.pais }}</p>
+        <p>Descripcion: {{ dato.descripcion }}</p>
+    {% endfor %}
+    <h2>Filtrar Owner de Peru</h2>
+
+    {% for data in peru %}
+        <p>Nombre: {{ data.nombre }}</p>
+        <p>Pais: {{ data.pais }}</p>
+        <p>Descripcion: {{ data.descripcion }}</p>
+    {% endfor %}
+{% endblock %}

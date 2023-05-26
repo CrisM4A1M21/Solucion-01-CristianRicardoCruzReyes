@@ -1,0 +1,18 @@
+{% extends 'pokemon/base_generic.html' %}
+{% block content %}
+    <h1>“¡¡Hola Pythonista, el App Pokemon está funcionando correctamente!!”</h1>
+    <h2>Campo del modelo</h2>
+    {% for pokemon in pokemons %}
+        <p>Nombre: {{ pokemon.nombre }}</p>
+        <p>Numero: {{ pokemon.numero }}</p>
+        <p>Generacion: {{ pokemon.generacion }}</p>
+        <p>Tipo: {{ pokemon.tipo }}</p>
+    {% endfor %}
+    <h2>Mostrando los pokemon tipo fuego</h2>
+    {% for fuego in fuegos %}
+        <p>Nombre: {{ fuego.nombre }}</p>
+        <p>Numero: {{ fuego.numero }}</p>
+        <p>Generacion: {{ fuego.generacion }}</p>
+        <p>Tipo: {{ fuego.tipo }}</p>
+    {% endfor %}
+{% endblock %}

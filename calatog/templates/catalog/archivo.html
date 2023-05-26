@@ -1,0 +1,9 @@
+{% extends 'catalog/base_generic.html' %}
+{% block content %}
+    <h1>“¡¡Hola Pythonista, el App Calatog está funcionando correctamente!!”</h1>
+    <h2>Campo del modelo</h2>
+    {% for data in data_context %}
+        <p>campo1: {{ data.campo1 }}</p>
+    {% endfor %}
+
+{% endblock %}
